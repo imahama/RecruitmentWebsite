@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "About";
+
+    @*@Styles.Render(string.Format("~/Content/custom/{0}/css", ViewBag.Theme))*@
+
+    @*if (Model == "Green")
+    {
+        @Html.TextBox("School")
+        @Styles.Render("~/Content/custom/green/css")
+    }
+    else if (Model == "Red")
+    {
+        @Styles.Render("~/Content/custom/red/css")
+    }
+    else
+    {
+        @Styles.Render("~/Content/custom/default/css")
+    }*@
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>

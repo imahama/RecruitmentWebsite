@@ -1,0 +1,49 @@
+﻿@model RegistrationViewModel
+@{
+    ViewBag.Title = "Registration Form";
+    //List<string> _actionNameList = new List<string>() { "CreateDemogs", "CreateYourDetails" };
+}
+
+<h2>Registration Form</h2>
+
+@*
+        https://bootsnipp.com/snippets/featured/responsive-breadcrumbs
+        <div class="container">
+        <div class="row">
+            <ul class="breadcrumb" style="overflow-x: scroll">
+                <li class="completed"><a href="javascript:void(0);">Your Details</a></li>
+                <li class="completed"><a href="javascript:void(0);">Group Registration</a></li>
+                <li class="active"><a href="javascript:void(0);">Pass Selection</a></li>
+                <li><a href="javascript:void(0);">About Your Company</a></li>
+                <li><a href="javascript:void(0);">Document Upload</a></li>
+                <li><a href="javascript:void(0);">Work Samples Upload</a></li>
+                <li><a href="javascript:void(0);">Payment</a></li>
+            </ul>
+        </div>
+    </div>*@
+
+<div class="container">
+    @*https://bootsnipp.com/snippets/featured/responsive-breadcrumbs*@
+    <div class="row">
+        <div id="bc1" class="btn-group btn-breadcrumb">
+            <a href="#" class="btn btn-default completed"><div>Your Details</div></a>
+            <a href="#" class="btn btn-default active"><div>Group Registration</div></a>
+            <a href="#" class="btn btn-default"><div>Pass Selection</div></a>
+            <a href="#" class="btn btn-default"><div>About Your Company</div></a>
+            <a href="#" class="btn btn-default"><div>Document Upload</div></a>
+            <a href="#" class="btn btn-default"><div>Work Samples Upload</div></a>
+            <a href="#" class="btn btn-default"><div>Payment</div></a>
+        </div>
+    </div>
+</div>
+
+@foreach (var ac in Model._ActionNameList)
+{
+    @Html.Action(ac)
+    <hr />
+}
+
+@section scripts
+{
+   @Scripts.Render("~/bundles/site-scripts")
+}
